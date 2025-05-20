@@ -42,11 +42,11 @@ export function showLibraryDataSetCommand(tree: CICSTree, treeview: TreeView<any
     const libraryPattern = library.join(", ");
     const libraryTree = resourceFolders.filter((child) => child instanceof CICSLibraryTree)[0] as CICSLibraryTree;
     const libraryDSNPattern = libraryDSN.join(", ");
-    if(libraryTree){
-         libraryTree.setFilter(libraryPattern);
-         await libraryTree.loadContents();
+    if(library.length > 0){
+      libraryTree.setFilter(libraryPattern);
+      await libraryTree.loadContents();
     }
-    if(libraryDSNPattern){
+    if(libraryDSN.length > 0){
       libraryTree.children[0].setFilter(libraryDSNPattern);
       await libraryTree.children[0].loadContentsWithDSFilter()
     }

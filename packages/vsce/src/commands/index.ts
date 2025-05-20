@@ -110,6 +110,8 @@ export const getCommands = (treeDataProv: CICSTree, treeview: TreeView<any>, con
     getResourceInspectorforLocalFile(context, treeview),
     getToggleResourceSettingCommand(),
     
-    showLibraryDataSetCommand(treeDataProv, treeview)
+    showLibraryDataSetCommand(treeDataProv, treeview),
+
+    getToggleResourceSettingCommand()
   ];
 };
